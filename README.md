@@ -78,3 +78,8 @@ Developers should ensure all code passes linting checks before submitting Pull R
 ```bash
 npm run lint
 ```
+
+## Note
+
+This repository is a demonstration project.
+No production client data is included.
