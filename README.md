@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# Sri Lanka Tour Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application for browsing and booking tourism packages in Sri Lanka. The application provides an intuitive user interface for exploring local destinations and predefined tour packages.
 
-Currently, two official plugins are available:
+## Architecture & Technology Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built as a Single Page Application (SPA) utilizing a modern frontend technology stack:
 
-## React Compiler
+- **Core Framework:** React 19
+- **Language:** TypeScript for static type checking and structural safety
+- **Build Tool:** Vite for fast Hot Module Replacement (HMR) and optimized production builds
+- **Routing:** React Router DOM (v7) for client-side navigation
+- **Iconography:** Lucide React
+- **Styling:** Vanilla CSS 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prerequisites
 
-## Expanding the ESLint configuration
+Before setting up the project locally, ensure you have the following installed:
+- Node.js (v18.0.0 or higher recommended)
+- npm (v9.0.0 or higher)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Local Development Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/SachithGamage12/Tour-Website.git
+   cd Tour-Website
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will run locally, typically available at `http://localhost:5173`.
+
+## Project Structure
+
+The codebase is organized adhering to standard component-based module patterns:
+
+```text
+src/
+├── assets/          # Static assets (images, icons)
+├── components/      # Reusable UI components
+│   ├── common/      # Shared layout components (Header, Footer)
+│   ├── destinations/# Destination-specific UI elements
+│   ├── home/        # Landing page components
+│   └── packages/    # Tour package UI modules
+├── data/            # Static data structures
+├── pages/           # High-level route components
+│   ├── Destinations.tsx
+│   ├── Home.tsx
+│   └── Packages.tsx
+├── App.tsx          # Root component and router configuration
+├── index.css        # Global stylesheet and design tokens
+└── main.tsx         # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The project provides the following npm scripts for development and deployment processes:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `npm run dev` - Starts the Vite development server with HMR.
+- `npm run build` - Compiles the TypeScript code and produces an optimized production bundle in the `dist` directory.
+- `npm run lint` - Executes ESLint to statically analyze the codebase for adherence to configured rules and code quality standards.
+- `npm run preview` - Serves the generated production build locally for verification prior to deployment.
+
+## Code Quality & Linting
+
+Code maintainability is enforced through a strict ESLint configuration (`eslint.config.js`). It incorporates rules for standard JavaScript semantics, TypeScript type-checking, and React-specific patterns (such as React Hooks dependency array validation). 
+
+Developers should ensure all code passes linting checks before submitting Pull Requests:
+
+```bash
+npm run lint
 ```
