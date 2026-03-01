@@ -1,6 +1,6 @@
-# Sri Lanka Tour Booking Platform
+# Global Tour Booking Platform
 
-A modern, responsive web application for browsing and booking tourism packages in Sri Lanka. The application provides an intuitive user interface for exploring local destinations and predefined tour packages.
+A modern, responsive web application for browsing and booking tourism packages worldwide. The application provides an intuitive user interface for exploring international destinations and predefined tour packages.
 
 ## Architecture & Technology Stack
 
