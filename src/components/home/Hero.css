@@ -6,8 +6,8 @@
     background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2668&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     padding-top: 5rem;
+    transform: translateZ(0); /* Hardware acceleration */
     /* Account for header */
 }
 
