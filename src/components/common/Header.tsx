@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Compass, Menu, X } from 'lucide-react';
+import { Globe, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import './Header.css';
 
@@ -26,8 +26,8 @@ const Header = () => {
         <header className={`header ${isScrolled ? 'header-scrolled bg-glass' : ''}`}>
             <div className="container header-container">
                 <Link to="/" className="logo">
-                    <Compass className="logo-icon text-gold" size={32} />
-                    <span className="logo-text">Aura<span className="text-gold">Travel</span></span>
+                    <Globe className="logo-icon text-gold" size={32} />
+                    <span className="logo-text">World<span className="text-gold">Tour</span></span>
                 </Link>
 
                 {/* Desktop Navigation */}

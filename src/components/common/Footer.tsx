@@ -1,4 +1,4 @@
-import { Compass, Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
+import { Globe, Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -10,8 +10,8 @@ const Footer = () => {
                 {/* Brand & Description */}
                 <div className="footer-brand">
                     <Link to="/" className="footer-logo">
-                        <Compass className="text-gold" size={32} />
-                        <span className="logo-text">Aura<span className="text-gold">Travel</span></span>
+                        <Globe className="text-gold" size={32} />
+                        <span className="logo-text">World<span className="text-gold">Tour</span></span>
                     </Link>
                     <p className="footer-description">
                         Experience the world's most breathtaking destinations with our premium curated travel packages.
@@ -60,7 +60,7 @@ const Footer = () => {
                         </li>
                         <li className="contact-item">
                             <Mail size={18} className="text-gold" />
-                            <span>support@auratravel.com</span>
+                            <span>support@worldtour.com</span>
                         </li>
                     </ul>
                 </div>
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; 2025 Aura Travel. copyright claim by Sachith Gamage.</p>
+                <p>&copy; 2025 World Tour. copyright claim by Sachith Gamage.</p>
             </div>
         </footer>
     );
